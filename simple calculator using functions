@@ -1,0 +1,82 @@
+#include<stdio.h>
+int add(int a,int b);
+int sub(int a,int b);
+int mul(int a,int b);
+int div(int a,int b);
+int mod(int a,int b);
+int add(int a,int b)
+{
+   int res;
+   res=a+b;
+   return res;
+}
+int sub(int a,int b)
+{
+  int res;
+  res=a-b;
+  return res;
+}
+int mul(int a,int b)
+{
+   int res;
+   res=a*b;
+   return res;
+}
+int div(int a,int b)
+{
+   int res;
+   res=a/b;
+   return res;
+}
+int mod(int a,int b)
+{
+   int res;
+   res=a%b;
+   return res;
+}
+int main()
+{
+      int choice;
+      int res,a,b;
+      printf("1.Add");
+      printf("2.Sub");
+      printf("3.mul");
+      printf("4.div");
+      printf("5.mod");
+      printf("Enter Your Choice");
+      scanf("%d",&choice);
+      if(choice>0&&choice<=5)
+      {
+       printf("Enter The Value Of a,b");
+       scanf("%d%d",&a,&b);
+      }
+      else
+      {
+         printf("invalid choice");
+      }
+      switch(choice)
+      {
+
+         case 1:
+            res=add(a,b);
+            printf("%d",res);
+            break;
+         case 2:
+            res=sub(a,b);
+            printf("%d",res);
+            break;
+         case 3:
+            res=mul(a,b);
+            printf("%d",res);
+            break;
+         case 4:
+            res=div(a,b);
+            printf("%d",res);
+            break;
+         case 5:
+            res=mod(a,b);
+            printf("%d",res);
+            break;
+      }
+      return 0;
+}
