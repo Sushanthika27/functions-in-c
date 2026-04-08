@@ -1,0 +1,57 @@
+#include<stdio.h>
+int fah_to_cel(int f);
+int cel_to_fah_(int c);
+int fah_to_cel(int f)
+{
+   int res;
+   res=(((5*f)-32)/9);
+   return res;
+}
+int cel_to_fah(int c)
+{
+   int res;
+   res=((9*c)/5)+32;
+   return res;
+}
+void tem()
+{
+   int f,c;
+   int ch;
+   do {
+         printf("1.fahrenheit to celcius\n2.celcius to fahrenheit:");
+         printf("Enter your choice");
+         scanf("%d",&ch);
+         switch(ch)
+         {
+                 case 1:
+                    {
+                     printf("Enter the temperature in fahrenheit");
+                     scanf("%d",&f);
+                     c=fah_to_cel(f);
+                     printf("\n%d\t celcius",c);
+                     break;
+                    }
+                 case 2:
+                    {
+                     printf("Enter the temperature in celcius");
+                     scanf("%d",&c);
+                     f=cel_to_fah(c);
+                     printf("\n%d\tfahrenheit",f);
+                     break;
+                    }
+                 case 3:
+                    {
+                       break;
+                    }
+                 default:
+                    {
+                     printf("invalid choice");
+                    }
+         }
+     }while(ch!=3);
+}
+int main()
+{
+   tem();
+   return 0;
+}
